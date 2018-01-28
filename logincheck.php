@@ -1,19 +1,19 @@
-﻿<?php 
+<?php 
 //登录处理界面 logincheck.php
 //判断是否按下提交按钮
  if(isset($_POST["submit"]) && $_POST["submit"] == "登陆") 
  { 
- //将用户名和密码存入变量中，供后续使用
+ //将用户名和密码存入变量中
  $user = $_POST["username"]; 
  $psw = $_POST["userpwd"]; 
  if($user == "" || $psw == "") 
  {
  //用户名或者密码其中之一为空，则弹出对话框，确定后返回当前页的上一页 
- echo "<script>alert('请输入用户名或密码！'); history.go(-1);</script>"; //-1上一个页面，1前进一个页面
+ echo "<script>alert('请输入用户名或密码！'); history.go(-1);</script>"; 
  } 
  else 
  { //确认用户名密码不为空，则连接数据库
- $conn = mysqli_connect("localhost","root","123456");//数据库帐号密码为安装数据库时设置
+ $conn = mysqli_connect("localhost","root","root");//数据库帐号密码为安装数据库时设置
  if(mysqli_errno($conn)){
  echo mysqli_errno($conn);
  exit;

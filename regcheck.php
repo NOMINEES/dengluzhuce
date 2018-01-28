@@ -7,13 +7,13 @@
         $psw_confirm = $_POST["confirm"];  
         if($user == "" || $psw == "" || $psw_confirm == "")  
         {  
-            echo "<script>alert('请确认信息完整性！'); history.go(-1);</script>";  
+            echo "<script>alert('请确认信息完整性！'); history.go(-1);</script>";  //-1上一个页面，1前进一个页面
         }  
         else  
         {  
             if($psw == $psw_confirm)  
             {  
-                $conn = mysqli_connect("localhost","root","123456");   //连接数据库,帐号密码为自己数据库的帐号密码  
+                $conn = mysqli_connect("localhost","root","root");   //连接数据库,帐号密码为自己数据库的帐号密码  
                 if(mysqli_errno($conn)){
                     echo mysqli_error($conn);
                     exit;

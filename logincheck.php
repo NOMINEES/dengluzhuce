@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 //登录处理界面 logincheck.php
 //判断是否按下提交按钮
  if(isset($_POST["submit"]) && $_POST["submit"] == "登陆") 
@@ -9,7 +9,7 @@
  if($user == "" || $psw == "") 
  {
  //用户名或者密码其中之一为空，则弹出对话框，确定后返回当前页的上一页 
- echo "<script>alert('请输入用户名或密码！'); history.go(-1);</script>"; 
+ echo "<script>alert('请输入用户名或密码！'); history.go(-1);</script>"; //-1上一个页面，1前进一个页面
  } 
  else 
  { //确认用户名密码不为空，则连接数据库
